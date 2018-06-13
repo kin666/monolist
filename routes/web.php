@@ -31,3 +31,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::delete('want', 'ItemUserController@dont_want')->name('item_user.dont_want');
     Route::resource('users', 'UsersController', ['only' => ['show']]);
 });
+// ランキング
+Route::get('ranking/want', 'RankingController@want')->name('ranking.want');
+
